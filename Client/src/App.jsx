@@ -10,6 +10,7 @@ import Form from './components/Form';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Favorites from './components/Favorites/Favorites';
 
 function App() {
    const [characters, setCharacters] = useState([]);
@@ -54,6 +55,7 @@ useEffect(() => {
             <Route path='/about' element= {<About/>}/>
             <Route path='/detail/:id' element= {<Detail/>}/>
             <Route path='/' element= {<Form login ={login}/>}/>
+            <Route path='/favorites' element= {<Favorites/>}/>
          </Routes>
       </div>
    );
